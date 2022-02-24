@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="text-center mt-5">Student Final Mark List</h2>
+    <h2 class="text-center mt-5">👨‍🎓 Student Final Mark List 👩‍🎓</h2>
     <div class="d-flex mt-5">
       <div class="row">
         <div class="mt-4">
@@ -31,7 +31,7 @@
           />
         </div>
         <div class="mt-4">
-          <button class="btn btn-primary rounded-0" @click="submitMark">
+          <button @click="submitMark" class="btn btn-primary rounded-0">
             Add Mark
           </button>
         </div>
@@ -61,22 +61,20 @@ export default {
   name: "FinalMark",
   data: () => {
     return {
-      student: "Hellou",
-      students: [
-        {
-          name: "Omar",
-          subject: "English",
-          mark: 9 + "  - Excelent",
-        },
-      ],
+      name: "",
+      subject: "",
+      mark: "",
+      students: [],
     };
   },
   methods: {
     submitMark() {
-      console.log("hello");
-      // this.students.push({
-      // name: this.task,
-      // });
+      // console.log(this.name);
+      this.students.push({
+        name: this.name,
+        subject: this.subject,
+        mark: this.mark,
+      });
     },
   },
 };
