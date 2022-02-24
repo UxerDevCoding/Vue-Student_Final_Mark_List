@@ -5,6 +5,7 @@
       <div class="row">
         <div class="mt-4">
           <input
+            id="name"
             type="text"
             v-model="name"
             placeholder="Name Student"
@@ -64,7 +65,11 @@ export default {
       name: "",
       subject: "",
       mark: "",
-      students: [],
+      students: [
+        {
+          name: "Omar",
+        },
+      ],
     };
   },
   methods: {
