@@ -68,6 +68,8 @@ export default {
       students: [
         {
           name: "Omar",
+          subject: "Maths",
+          mark: 8,
         },
       ],
     };
@@ -75,6 +77,7 @@ export default {
   methods: {
     submitMark() {
       // console.log(this.name);
+
       this.students.push({
         name: this.name,
         subject: this.subject,
